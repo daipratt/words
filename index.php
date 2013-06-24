@@ -1,5 +1,5 @@
 <?php
-
+    require("words.php");
 ?>
 
 <!DOCTYPE html>
@@ -9,6 +9,9 @@
         <title>Test Script</title>
     </head>
     <body>
-        
+        <form action="words.php" method="post">
+        Input word: <input type="text" id="word">
+            <input type="submit">
+        </form>
     </body>
 </html>
