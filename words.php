@@ -1,9 +1,9 @@
 <?php
     class Words{
         // Declare variables
-        public $word;
-        public $file = file_get_contents('wordlist.txt');
-        public $wordAry = explode("\n", $file);
+        private $word;
+        private $file = file_get_contents('wordlist.txt');
+        private $wordAry = explode("\n", $file);
 
         function Words($word){
             $this->word = $word;
