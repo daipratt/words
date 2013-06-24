@@ -6,7 +6,7 @@
         public $wordAry = explode("\n", $file);
 
         function Words($word){
-            
+            $this->word = $word;
         }
 
         function isValid($word){
