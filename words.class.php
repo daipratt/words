@@ -76,5 +76,19 @@
             $url = "http://translate.google.com/#en/".$lang[0]."/".$this->word;
             return $url;
         }
+
+        // determins if the word and another word is an anagram or not.
+        function is_anagram($word2){
+            $word1Split = str_split($this->word);
+            $word2Split = str_split($word2);
+            sort($word1Split);
+            sort($word2Split);
+            for ($i = 0; $i < count($word1Split); $i++){
+                if ($word1Split[$i] != $word2Split[$i]){
+                    return FALSE;
+                }
+            }  
+            return TRUE;
+        }
     }
 ?>
