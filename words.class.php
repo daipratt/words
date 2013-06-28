@@ -24,7 +24,7 @@
 
         // returns if valid
         function is_valid(){
-            $file = file_get_contents('txt/wordlist.txt');
+            $file = file_get_contents('wordlist.txt');
             $wordAry = explode("\n", $file);
             $count = 0;
             for ($i = 0; $i < count($wordAry); $i++){
