@@ -6,7 +6,7 @@ A php script that will do anything you can with words. From spell checking, to d
 todo lsit
 =========
 
--create a function that returns the submitted word and it's definition or definitions.
+-create a function that returns the submitted word and it's definition or definitions.<br>
 -create a function that returns translation of word
 
 functions created
