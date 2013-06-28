@@ -1,7 +1,7 @@
 <?php
     
     /*
-     *    File:			Words.class.php
+     *    File:    		Words.class.php
      *	Description:	A php script that does anything with words
      *	Author:			Chase Willden 06/28/2013
      */
@@ -23,11 +23,11 @@
 
         // bool: returns if word is valid
         function is_valid(){
-            $file = file_get_contents('txt/wordlist.txt');
+            $file = file_get_contents('wordlist.txt');
             $wordAry = explode("\n", $file);
             $count = 0;
             for ($i = 0; $i < count($wordAry); $i++){
-                if ($wordAry[$i] == $word){
+                if ($wordAry[$i] == $this->word){
                     $count++;
                     return TRUE;
                     break;
@@ -43,11 +43,11 @@
         function definition(){
             
             $filename = "definitions.txt";
-            $word = strtoupper($word);
+            $word = strtoupper($this->word);
             $word = $word."\n";
             $fh = fopen($filename, 'r');
             $olddata = fread($fh, filesize($filename));
-            $pos = strpos($olddata, $word);
+            $pos = strpos($olddata, $this->word);
             $count = 3000;
             $char = substr($olddata, $pos, $count);
             $lineBreaks = nl2br($char);
@@ -66,6 +66,15 @@
 
             fclose($fh);
             return $definiton;
+        }
+
+        #TODO: set this function up
+        // request google translation for request word
+        function translate($lang){
+            $lang = str_split($lang, 2);
+            // http://translate.google.com/#en/pl/hello
+            $url = "http://translate.google.com/#en/".$lang[0]."/".$this->word;
+            return $url;
         }
     }
 ?>
