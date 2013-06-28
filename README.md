@@ -13,4 +13,5 @@ functions created
 =================
 is_valid() = returns true if word is valid<br>
 definition() = returns the definition of the word<br>
-translate($lang) = returns the tranlation for the word
+translate($lang) = returns the tranlation for the word<br>
+is_anagram($word2) = return true if the two words are anagrams
