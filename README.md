@@ -7,7 +7,7 @@ todo lsit
 =========
 
 -create a function that returns the submitted word and it's definition or definitions.
-
+-create a function that returns translation of word
 
 functions created
 =================
