@@ -11,5 +11,5 @@ todo lsit
 
 functions created
 =================
-is_valid() = returns true if word is valid\n
+is_valid() = returns true if word is valid<br>
 definition() = returns the definition of the word
